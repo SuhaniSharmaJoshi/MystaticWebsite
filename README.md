@@ -12,25 +12,16 @@ Live Demo
 
 Getting Started
 1. Clone the Repository
-bash
-Copy
-Edit
 git clone https://github.com/SuhaniSharmaJoshi/MystaticWebsite.git
 cd MystaticWebsite
+
 2. Upload Files to S3
 Log in to AWS S3 Console.
-
 Create a bucket (e.g., mystaticwebsite).
-
 Enable Static Website Hosting in the bucket settings.
-
 Upload your website files (index.html, styles.css, etc.).
 
 Set the bucket policy to allow public access:
-
-json
-Copy
-Edit
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -45,29 +36,20 @@ Edit
 }
 3. Configure CloudFront
 Open AWS CloudFront and create a distribution.
-
 Select your S3 bucket as the origin.
-
 Enable "Restrict Bucket Access" if you want to make S3 private.
-
 Copy the CloudFront URL and test the website.
 
 Deploying Updates
 Using GitHub
-Add changes to Git:
 
-bash
-Copy
-Edit
+Add changes to Git:
 git add .
 git commit -m "Updated website content"
 git push origin main
 Upload the updated files to S3 manually or automate with a CI/CD pipeline.
 
 Project Structure
-bash
-Copy
-Edit
 /MystaticWebsite
 │── index.html      # Main HTML file
 │── styles.css      # CSS styles
